@@ -1,0 +1,6 @@
+git init
+git add program.py
+git add .
+git status
+git remote add origin https://github.com/ravlyuk/Notes.git
+git push -u origin master

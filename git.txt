@@ -1,0 +1,26 @@
+# создать репозиторий
+git init
+
+# добавить указаный файл в репозиторий
+git add program.py
+
+# добавить всё в репозиторий
+git add .
+
+# узнать статус
+git status
+
+# закоминтить
+git commit -m "Текст вашего сообщения о том, что изменено"
+
+# подключить указанный репозиторий
+git remote add origin https://github.com/ravlyuk/test.git
+
+# выполнить синхронизацию с репозиторией
+git push -u origin master
+
+# удалить репозиторий
+git remote rm origin
+
+# показать текущий репозиторий
+git remote -v
