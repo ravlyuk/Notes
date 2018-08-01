@@ -1,6 +1,9 @@
 # создать новый репозиторий
 git init
 
+# клонировать репозиторий
+git clone https://github.com/ravlyuk/notes.git
+
 # добавить указаный файл в репозиторий
 git add program.py
 
@@ -14,7 +17,7 @@ git status
 git commit -m "Текст вашего сообщения о том, что изменено"
 
 # подключить указанный репозиторий
-git remote add origin https://github.com/ravlyuk/test.git
+git remote add origin https://github.com/ravlyuk/notes.git
 
 # выполнить синхронизацию с репозиторией
 git push -u origin master
