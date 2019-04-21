@@ -6,3 +6,6 @@ sudo -u postgres psql
 
 Дать права рут:
 ALTER USER user WITH SUPERUSER;
+
+Перезагрузить постгрес:
+sudo service postgresql restart
