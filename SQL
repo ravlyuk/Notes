@@ -1,0 +1,11 @@
+INSTALL
+
+sudo apt update
+sudo apt install mysql-server
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password';
+FLUSH PRIVILEGES;
+exit
+mysql -u root -p
+
+----
