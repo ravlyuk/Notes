@@ -1,0 +1,13 @@
+You can download Python 3.6.7 source code from Python site, then compile it yourself.
+
+wget -P ~/Downloads https://www.python.org/ftp/python/3.6.7/Python-3.6.7.tar.xz
+cd ~/Downloads
+tar -xJf Python-3.6.7.tar.xz
+cd Python-3.6.7
+Proceed to installation.
+
+./configure
+make
+make test
+sudo make install
+This will install Python as python3 executable, assuming that what you want.
