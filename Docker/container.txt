@@ -46,3 +46,6 @@ docker ps
 
 Посмотреть все контейнеры, даже остановленные
 docker ps -a
+
+Запуск команды внетри контейнера
+docker exec -it <container_name> <command> 
