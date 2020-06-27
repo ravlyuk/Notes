@@ -1,0 +1,5 @@
+Посмотреть все volume
+docker volume ls
+
+Создать volume
+docker volume create <name>
