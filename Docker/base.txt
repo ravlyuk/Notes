@@ -7,6 +7,9 @@ docker images
 Запустить контейнер
 docker run <image_name>
 
+Остановить контейнер
+docker stop <image_name>
+
 Удалить контейнер
 docker rm <image_name>
 
