@@ -6,3 +6,6 @@ docker built -t <user_login>/<image_name> .
 
 Запушить на dockerhub
 docker push <user_login>/<image_name>
+
+Спулить образ
+docker pull <image_name>:<version>
