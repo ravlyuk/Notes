@@ -1,4 +1,7 @@
-docker run --rm --name web -p 8080:8080 -e TZ=Europe/Moscow -v web:/usr/src/app/resources web-hello
+docker run -d --rm --name web -p 8080:8080 -e TZ=Europe/Moscow -v web:/usr/src/app/resources web-hello
+
+запуск в фоне
+-d 
 
 удаление контейнера после завершения\закрытия
 --rm
