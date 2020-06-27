@@ -1,0 +1,11 @@
+Создание образа
+docker built -t <image_name> .
+
+Посмотреть образы
+docker images
+
+Удалить образ
+docker rmi <image_name>
+
+Удалить все образы
+docker rmi $(docker images -q)
