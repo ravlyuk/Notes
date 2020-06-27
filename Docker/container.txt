@@ -49,3 +49,7 @@ docker ps -a
 
 Запуск команды внетри контейнера
 docker exec -it <container_name> <command> 
+
+Присоедениться к контейнеру
+docker attach <container_name>
+выйти с процесса и не закрыть его: ctrl + P, ctrl + q 
