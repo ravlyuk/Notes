@@ -4,7 +4,7 @@ docker run -d --rm --name web -p 8080:8080 -e TZ=Europe/Moscow -v web:/usr/src/a
 -d 
 
 удаление контейнера после завершения\закрытия
---rm
+rm
 
 имя контейнера
 --name <name>
@@ -18,10 +18,19 @@ docker run -d --rm --name web -p 8080:8080 -e TZ=Europe/Moscow -v web:/usr/src/a
 шаринг папки через volume
 -v <slug volume>:<путь в контейнере>
 
+интерактивный режим
+-i
+
+терминал
+-t
+
 ==================================================================================================
 
 Запустить контейнер
 docker run <image_name>
+
+Запустить конткейнер по имени
+docker start <image_name>
 
 Остановить контейнер
 docker stop <image_name>
@@ -30,7 +39,7 @@ docker stop <image_name>
 docker rm <image_name>
 
 Удалить все контейнеры
-docker rm $(docker ps -qa)
+docker rm $(docker ps -aq)
 
 Посмотреть запущенные контейнеры
 docker ps
