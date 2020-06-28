@@ -1,2 +1,0 @@
-Собрать статику
-python manage.py collectstatic
