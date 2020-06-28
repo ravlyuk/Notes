@@ -4,7 +4,14 @@ adduser username
 usermod -aG sudo username
 groups username
 su username
----------------------------------------
+--------------------------------------
+Cтавим зависимости
+--------------------------------------
+sudo apt install nginx git supervisor
+sudo apt install postgresql
+sudo apt install psycopg2-binary
+
+--------------------------------------
 Компиляции python 3.6
 ----------------------
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev
@@ -37,6 +44,9 @@ GRANT ALL PRIVILEGES ON DATABASE movie TO userdb;
 gunicorn project.wsgi:application --bind 111.222.333.44:8000
 ----------------------------------------
 Настрока nginx
+--------------
+sudo nano /etc/nginx/sites-available/default
+ALT+T
 --------------
 server {
     listen 80;
