@@ -1,0 +1,4 @@
+host vs
+    hostname 80.249.146.39
+    user root
+    IdentityFile ~/.ssh/vscale
