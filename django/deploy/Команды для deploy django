@@ -116,6 +116,11 @@ server{
 ---------------------------------------
 Настройка supervisor
 cd /etc/supervisor/conf.d/
+----
+создаем ссылку на файл конфигурации (или можно просто поместить сам файл)
+пример:
+sudo ln /home/john/news_board/config/news.conf
+----
 sudo update-rc.d supervisor enable
 sudo service supervisor start
 sudo supervisorctl reread
