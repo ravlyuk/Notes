@@ -2,7 +2,7 @@
 ---------------------
 adduser username
 usermod -aG sudo username
-group username
+groups username
 su username
 ---------------------------------------
 Компиляции python 3.6
