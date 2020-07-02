@@ -35,6 +35,9 @@ docker start <image_name>
 Остановить контейнер
 docker stop <image_name>
 
+Остановить все контейнеры
+docker rm $(docker ps -a -q)
+
 Удалить контейнер
 docker rm <image_name>
 
