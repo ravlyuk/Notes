@@ -1,43 +1,25 @@
-# пример работы декоратора
+def benchmark(func):
+    import time
+    
+    def wrapper(*args, **kwargs):
+        start = time.time()
+        return_value = func(*args, **kwargs)
+        end = time.time()
+        print('[*] Время выполнения: {} секунд.'.format(end-start))
+        return return_value
+    return wrapper
 
-import functools
+@benchmark
+def fetch_webpage(url):
+    import requests
+    webpage = requests.get(url)
+    return webpage.text
 
+webpage = fetch_webpage('https://google.com')
+print(webpage)
 
-def logger(func):
-    @functools.wraps(func)
-    def wrapped(*args, **kwargs):
-        result = func(*args, **kwargs)
-        with open('log.txt', 'w') as f:
-            f.write(str(result))
-
-        return result    
-    return wrapped
-
-
-@logger
-def summator(num_list):
-    return sum(num_list)
-
-
-print('Summator: {}'.format(summator([1, 2, 3, 4])))
-
-
-# декоратор с параметром, который записывает лог в указанный файл
-
-def logger(filename):
-    def decorator(func):
-        def wrapped(*args, **kwargs):
-            result = func(*args, **kwargs)
-            with open(filename, 'w') as f:
-                f.write(str(result))
-            return result
-        return wrapped
-    return decorator
-
-
-@logger('new_log.txt')
-def summator(num_list):
-    return sum(num_list)
-
-
-summator([1, 2, 3, 4, 5, 6])
+'''
+Вывод после выполнения:
+[*] Время выполнения: 1.4475083351135254 секунд.
+<!doctype html><html itemscope="" itemtype="http://schema.org/WebPage"........
+'''
