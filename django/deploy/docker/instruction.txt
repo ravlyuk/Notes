@@ -3,3 +3,6 @@ https://testdriven.io/blog/dockerizing-django-with-postgres-gunicorn-and-nginx/
 
 code in the django-on-docker repo
 https://github.com/testdrivenio/django-on-docker
+
+Ребилд
+docer-compose up --remove-orphans --build
