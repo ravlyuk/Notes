@@ -1,0 +1,11 @@
+sudo -u postgres psql
+create database cursor_db;
+create user cursor with encrypted password 'very_secret_password';
+grant all privileges on database cursor_db to cursor;
+\q;
+
+Дать права рут:
+ALTER USER user WITH SUPERUSER;
+
+Перезагрузить постгрес:
+sudo service postgresql restart
