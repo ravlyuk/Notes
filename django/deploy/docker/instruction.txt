@@ -5,4 +5,4 @@ code in the django-on-docker repo
 https://github.com/testdrivenio/django-on-docker
 
 Ребилд
-docker-compose up --remove-orphans --build
+docker-compose up --remove-orphans --build -d
