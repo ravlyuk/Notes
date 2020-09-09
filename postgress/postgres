@@ -1,3 +1,5 @@
+Создание и запуск
+
 sudo -u postgres psql
 create database cursor_db;
 create user cursor with encrypted password 'very_secret_password';
@@ -9,3 +11,8 @@ ALTER USER user WITH SUPERUSER;
 
 Перезагрузить постгрес:
 sudo service postgresql restart
+
+-----------
+
+Просмотр доступных баз данных
+\l
