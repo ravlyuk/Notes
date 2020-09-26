@@ -1,0 +1,19 @@
+==============================
+GET token
+==============================
+
+method: post
+urls:
+http://127.0.0.1:8000/api/token/
+
+form-data:
+username: django_username
+password: django_password
+
+==============================
+USE token with each request
+==============================
+
+headers:
+Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjAwMDA3NTc1LCJqdGkiOiIwOGU0NzVjYjEyNDE0NDcxOWNmZmFiMWU3MmRmYmVhMiIsInVzZXJfaWQiOjN9.EuzjLhyAIGbmt4Ir3TKGxbi8XBbBY65e_eBV5A7VxxY
+

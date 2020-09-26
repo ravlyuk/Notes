@@ -1,0 +1,68 @@
+==============================
+CREATE token
+==============================
+
+url:
+http://127.0.0.1:8000/auth/users/
+
+form-data:
+username: django_username
+password: django_password
+email: django_email
+
+
+==============================
+AUTH with token
+==============================
+
+method: post
+
+url:
+http://127.0.0.1:8000/auth/token/login/
+
+
+form-data:
+username: django_username
+password: django_password
+
+==============================
+USE token with each request
+==============================
+
+headers:
+Authorization: Token be405f7e28647347274910874833ac1ea25bbf4f
+
+==============================
+REMOVE token
+==============================
+
+url:
+http://127.0.0.1:8000/auth/token/logout/
+
+headers:
+Authorization: Token be405f7e28647347274910874833ac1ea25bbf4f
+
+==============================
+ABOUT current user
+==============================
+
+method: get
+
+url:
+http://127.0.0.1:8000/auth/users/me/
+
+headers:
+Authorization: Token be405f7e28647347274910874833ac1ea25bbf4f
+
+==============================
+Confirm email
+==============================
+
+method: post
+
+url:
+http://127.0.0.1:8000/auth/users/activation/
+
+form-data:
+uid: Mw
+token: aa4wwf-3f772569526445e2dc7cca0e4eb87c62
