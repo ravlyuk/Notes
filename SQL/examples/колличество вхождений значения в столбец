@@ -1,0 +1,4 @@
+SELECT 
+COUNT(ip_addr) AS value_occurrence
+FROM logs
+WHERE ip_addr='109.234.35.42'
