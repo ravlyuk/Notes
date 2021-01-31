@@ -1,0 +1,6 @@
+SELECT ip_addr,
+COUNT (ip_addr) AS value_occurrence
+FROM logs
+GROUP BY ip_addr
+ORDER BY value_occurrence DESC
+LIMIT 10;
