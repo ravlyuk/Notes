@@ -1,0 +1,7 @@
+aws configure
+
+вводим ID, Key, Region, json
+
+посмотреть конфиг
+
+.aws
