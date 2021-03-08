@@ -1,0 +1,19 @@
+# requirements.txt:
+
+...
+dj-static==0.0.6
+
+
+# YOURAPP/settings.py:
+
+...
+STATIC_ROOT = 'staticdir'
+STATIC_URL = '/staticpath/'
+
+# YOURAPP/wsgi.py:
+
+...
+from django.core.wsgi import get_wsgi_application
+from dj_static import Cling
+
+application = Cling(get_wsgi_application())
