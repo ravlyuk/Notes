@@ -1,0 +1,2 @@
+Получить уникальные значения:
+SELECT DISTINCT (align) FROM superheroes
