@@ -1,2 +1,5 @@
 Получить уникальные значения:
 SELECT DISTINCT (align) FROM superheroes
+
+Получить первые 10 уникальных значений:
+SELECT DISTINCT (align) FROM superheroes LIMIT 10
