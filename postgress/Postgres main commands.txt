@@ -1,0 +1,78 @@
+Запустить
+
+    sudo -u postgres psql
+
+Создать базу данных
+
+    CREATE DATABASE cursor_db;
+
+Создать пользователя cursor с паролем very_secret_password
+
+    CREATE USER cursor WITH ENCRYPTED PASSWORD 'very_secret_password';
+
+Ввойти в базу cursor_db с логином cursor
+
+    psql -h localhost cursor_db cursor
+
+Перезагрузить постгрес:
+
+    sudo service postgresql restart
+
+Дать права рут:
+
+    ALTER USER cursor WITH SUPERUSER;
+
+Команды терминала psql
+
+- \dt – показать все таблицы
+- \q – выход из терминала psql
+- \dn – показать все схемы
+- \du – показать всех пользователей
+- \d имя_таблицы - показать информацию о таблице
+
+Пример работы с Postgres в python
+
+    with con.cursor() as remote:
+    remote.execute("""INSERT INTO customers(customername, contactname, address, city, postalcode, country)
+    VALUES ('Thomas', 'David', 'Some Address', 'London', '774', 'Singapore');
+    SELECT * FROM customers;""")
+    return remote.fetchall()
+
+Выборка из таблицы
+
+     SELECT * FROM customers;
+
+Выборка по значению "Germany" из колонки "country" в таблице "Customers"
+
+    SELECT * FROM Customers WHERE country = 'Germany'
+
+Добавить в таблице "customers" значение "Johnny Depp" из колонки "customername" по ID "customerid = 1"
+UPDATE customers SET customername = 'Johnny Depp' WHERE customerid = 1
+
+Удалить из таблицы "customers" строчку с максимальным айди (то есть последнюю строчку в таблице). Колонка с айдишками - "customerid"
+
+    DELETE FROM customers WHERE customerid = (SELECT MAX(customerid) FROM customers)
+
+С таблицы "country" колонки "suppliers" выбрать и отсортировать значения по убыванию
+
+    SELECT country FROM suppliers ORDER BY country DESC ;
+
+C таблицы "customers" получить "country " и количество вхождений "country", группируя "country" по количеству вхождений выше 10
+
+    SELECT country, COUNT(country) FROM customers GROUP BY country HAVING COUNT(country) > 10;
+
+C таблицы customers выбрать первые 10 значений
+
+    SELECT * FROM customers LIMIT 10;
+
+C таблицы customers вывести пропустить первые 11 значений и вывести остальные
+
+    SELECT * FROM customers OFFSET 11;
+
+Получить все значения с таблицы "suppliers" которые содержат country: USA, UK, Japan
+
+    SELECT * FROM suppliers WHERE country = 'USA' AND country='UK' AND country='Japan';
+
+Получить "productname" с таблицы "products" где "supplierid" = "suppliers.supplierid" с таблицы "suppliers" по фильтру country = 'Sweden'
+
+    SELECT productname FROM products WHERE supplierid = (SELECT suppliers.supplierid FROM suppliers WHERE country = 'Sweden')
