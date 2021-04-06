@@ -11,3 +11,7 @@ GET foo
 EXISTS foo
 
 # (integer) 1
+
+SET foo '42' EX 20
+
+# установка жизни переменной на 20 сек
