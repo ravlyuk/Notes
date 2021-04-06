@@ -1,0 +1,13 @@
+sudo apt-get install redis-server
+
+redis-cli
+
+SET foo 43
+
+GET foo
+
+# 42
+
+EXISTS foo
+
+# (integer) 1
