@@ -12,6 +12,8 @@ ALTER USER user WITH SUPERUSER;
 Перезагрузить постгрес:
 sudo service postgresql restart
 
+ALTER USER user_name WITH PASSWORD 'new_password';
+
 -----------
 
 Просмотр доступных баз данных
