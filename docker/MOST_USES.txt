@@ -1,0 +1,16 @@
+sudo docker stop $(docker ps -a -q)  && sudo docker rm  $(docker ps -a -q) 
+
+=== kill containers: ===
+
+sudo aa-remove-unknown
+sudo systemctl restart docker.socket docker.service
+sudo docker rm --force $(docker ps -a -q)
+
+-----
+
+=== kill service on port: ===
+
+sudo fuser -k 8000/tcp
+sudo systemctl stop apache2
+
+sudo chown -R $USER:$USER .
