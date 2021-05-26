@@ -16,4 +16,7 @@ sudo systemctl stop apache2
 sudo chown -R $USER:$USER .
 
 Delete all volumes using the following command:
+
+docker container prune
+docker volume prune
 docker volume rm $(docker volume ls -q)
