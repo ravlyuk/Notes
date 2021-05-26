@@ -14,3 +14,6 @@ sudo fuser -k 8000/tcp
 sudo systemctl stop apache2
 
 sudo chown -R $USER:$USER .
+
+Delete all volumes using the following command:
+docker volume rm $(docker volume ls -q)
