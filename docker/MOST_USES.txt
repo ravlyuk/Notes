@@ -20,3 +20,7 @@ Delete all volumes using the following command:
 docker container prune
 docker volume prune
 docker volume rm $(docker volume ls -q)
+
+=== kill volumes: ===
+
+docker volume rm $(docker volume ls -q)
