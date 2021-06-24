@@ -36,13 +36,13 @@ docker start <image_name>
 docker stop <image_name>
 
 Остановить все контейнеры
-docker rm $(docker ps -a -q)
+docker rm -f $(docker ps -a -q)
 
 Удалить контейнер
 docker rm <image_name>
 
 Удалить все контейнеры
-docker rm $(docker ps -aq)
+docker rm -f $(docker ps -aq)
 
 Посмотреть запущенные контейнеры
 docker ps
