@@ -21,6 +21,6 @@ docker container prune
 docker volume prune
 docker volume rm $(docker volume ls -q)
 
-=== kill volumes: ===
+=== Остановить все контейнеры: ===
 
-docker volume rm $(docker volume ls -q)
+docker rm -f $(docker ps -a -q)
