@@ -1,6 +1,12 @@
 Запустить
 
-    sudo -u postgres psql
+linux
+sudo -u postgres psql
+
+macos
+psql -d postgres
+
+===================
 
 Создать базу данных
 
