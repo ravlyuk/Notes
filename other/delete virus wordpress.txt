@@ -1,3 +1,0 @@
-find ./ -type f -exec sed -i '/WPTemplatesOptions/,+2 d' *.php {} \;
-
-find -type f -name ".*" -delete
