@@ -1,6 +1,6 @@
 class Old:
     def get(self):
-        return '123'
+        return "123"
 
 
 class New:
@@ -14,9 +14,9 @@ class Adapter:
 
 
 def main(obj):
-    print(f'Result: {obj.get()}')
+    print(f"Result: {obj.get()}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     res = New()
     main(res)

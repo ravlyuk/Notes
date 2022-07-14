@@ -16,4 +16,4 @@ with redis.Redis(host="localhost", port=6379, db=0) as client:
     print(client.get("num"))
 
     # show all keys
-    print('all keys:', client.keys("*"))
+    print("all keys:", client.keys("*"))
