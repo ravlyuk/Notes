@@ -28,7 +28,7 @@ class CoinGraph:
         self._ax.plot(self._xdata, self._ydata, color='g')
         self._ax.legend([f'Last price: {self._ydata[-1]}$'])
         self._fig.canvas.draw()
-        plt.pause(0.2)
+        plt.pause(0.3)
 
     async def show(self):
         self._init_graph()
