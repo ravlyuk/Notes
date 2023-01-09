@@ -3,7 +3,6 @@
 файл admin.py в приложении
 """
 
-
 from django.contrib import admin
 
 # импорт моделей
