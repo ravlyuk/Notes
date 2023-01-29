@@ -17,8 +17,11 @@ emencia-cms-snippet==2.4.2
 Faker==15.3.4
 graphene==3.2.1
 graphene-django==3.0.0
+graphene-django-cud==0.10.0
+graphene-file-upload==1.3.0
 graphql-core==3.2.3
 graphql-relay==3.2.0
+install==1.3.5
 Jinja2==3.1.2
 jinja2-time==0.2.0
 make==0.1.6.post2

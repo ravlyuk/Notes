@@ -1,0 +1,17 @@
+# check ping of aws regions:
+
+https://www.cloudping.info/
+
+
+# simple web server example
+
+#!/bin/bash
+echo "---------------START---------------"
+yum -y update
+yum -y install httpd
+echo "<html><body bgcolor=black><h2><font color=red>Hello Linux server</h2></body></html>" > /var/www/html/index.html
+service httpd start
+sudo systemctl enable httpd.service
+cat lolo.txt
+echo "UserData executed on $(date)" >> /var/www/html/log.txt
+echo "---------------FINISH---------------"
