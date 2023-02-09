@@ -7,11 +7,31 @@ https://www.cloudping.info/
 
 #!/bin/bash
 echo "---------------START---------------"
-yum -y update
-yum -y install httpd
+yum update -y
+yum install httpd -y
 echo "<html><body bgcolor=black><h2><font color=red>Hello Linux server</h2></body></html>" > /var/www/html/index.html
 service httpd start
 sudo systemctl enable httpd.service
 cat lolo.txt
 echo "UserData executed on $(date)" >> /var/www/html/log.txt
 echo "---------------FINISH---------------"
+
+#!/bin/bash
+echo "---------------START---------------"
+yum update -y
+yum install httpd -y
+PrivateIP=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
+
+echo "Web Server with $PrivateIP " > /var/www/html/index.html
+service httpd start
+chkconfig httpd on
+echo "---------------FINISH---------------"
+
+# bootstrap logs for linux
+/var/log/cloud-init-output.log
+
+# stress test
+sudo amazon-linux-extras install epel -y
+sudo yum install stress -y
+#Run stress for 5mins
+sudo stress --cpu 1 --timeout 320
