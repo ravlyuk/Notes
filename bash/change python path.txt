@@ -1,0 +1,8 @@
+Changing Python version:
+
+First we need to check what are the versions in Python using this command: sudo ls /usr/bin/python*
+
+And then need to use this command to symlink them:
+
+sudo ln -sf /usr/bin/python3.9 /usr/bin/python3
+When you use that command, it will use python3.9 as the default python3.

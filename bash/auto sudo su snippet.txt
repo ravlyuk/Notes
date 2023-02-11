@@ -1,0 +1,2 @@
+sudo -S <<< "some_password" command
+sudo su
