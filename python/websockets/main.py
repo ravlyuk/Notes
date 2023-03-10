@@ -32,7 +32,7 @@ class CoinGraph:
 
     async def show(self):
         self._init_graph()
-        url = f'wss://stream.binance.com:9443/stream?streams={self.coin}@miniTicker'
+        url = f'wss://stream.binance.com:443/stream?streams={self.coin}@miniTicker'
         async with websockets.connect(url, ssl=ssl_context) as client:
             while True:
                 data = json.loads(await client.recv())['data']

@@ -1,2 +1,5 @@
-Prune unused Docker objects
+# Prune unused Docker objects
 https://docs.docker.com/config/pruning/
+
+# check logs of container in real time
+docker logs --follow <container_name>
