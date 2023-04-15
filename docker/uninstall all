@@ -1,7 +1,8 @@
-CONTAINERS REMOVE
+ALL
+docker rm -vf $(docker ps -aq) && docker rmi -f $(docker images -aq)
 
+CONTAINERS REMOVE
 docker rm -vf $(docker ps -aq)
 
 IMAGES REMOVE
-
 docker rmi -f $(docker images -aq)
